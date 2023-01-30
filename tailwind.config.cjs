@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         'bright-red': '#F3603C',
         'dark-blue': '#242D52',
+        'bright-red-hover': '#F98F75',
       },
     },
   },
