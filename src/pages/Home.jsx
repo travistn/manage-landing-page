@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 
 const Home = () => {
   return (
-    <div className='w-[90%]'>
+    <div>
       <Navbar />
     </div>
   );
