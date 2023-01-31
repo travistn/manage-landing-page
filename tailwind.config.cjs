@@ -8,6 +8,9 @@ module.exports = {
         'dark-blue': '#242D52',
         'bright-red-hover': '#F98F75',
       },
+      backgroundImage: {
+        pattern: 'url(../src/assets/bg-tablet-pattern.svg)',
+      },
     },
   },
   plugins: [],
