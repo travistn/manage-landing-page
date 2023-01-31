@@ -10,8 +10,8 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
-    <div className='w-[90%] m-auto'>
-      <div className='flex flex-row pt-8 px-4 lg:px-8 items-center'>
+    <>
+      <div className='flex flex-row pt-8 px-4 lg:px-8 items-center w-full'>
         <img
           src={logo}
           className='w-[110px] h-[18px] lg:w-[147px] lg:h-[24px] hover:cursor-pointer hover:opacity-80'
@@ -45,7 +45,7 @@ const Navbar = () => {
           </ul>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
