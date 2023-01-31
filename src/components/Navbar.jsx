@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className='flex flex-row pt-8 px-4 lg:px-8 items-center w-full'>
+      <div className='flex flex-row pt-8 lg:px-8 items-center w-full'>
         <img
           src={logo}
           className='w-[110px] h-[18px] lg:w-[147px] lg:h-[24px] hover:cursor-pointer hover:opacity-80'
