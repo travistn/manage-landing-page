@@ -34,5 +34,27 @@
       "description": "Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in-sync without being intrusive.",
       "image": "./assets/avatar-shanai.png"
     }
+  ],
+  "companies": [
+    {
+      "name": "facebook",
+      "logo": "./assets/icon-facebook.svg"
+    },
+    {
+      "name": "youtube",
+      "logo": "./assets/icon-youtube.svg"
+    },
+    {
+      "name": "twitter",
+      "logo": "./assets/icon-twitter.svg"
+    },
+    {
+      "name": "pinterest",
+      "logo": "./assets/icon-pinterest.svg"
+    },
+    {
+      "name": "instagram",
+      "logo": "./assets/icon-instagram.svg"
+    }
   ]
 }
