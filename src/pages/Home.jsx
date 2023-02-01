@@ -98,6 +98,14 @@ const Home = () => {
           Get Started
         </button>
       </section>
+      <section className='w-screen h-[405px] flex flex-col justify-center items-center gap-8 bg-bright-red lg:h-[220px] lg:flex-row'>
+        <h1 className='text-[40px] leading-[50px] tracking-[-1px] text-white font-bold text-center px-8'>
+          Simplify how your team works today.
+        </h1>
+        <button className='w-[137px] h-[44px] rounded-[22px] bg-white text-bright-red text-[13px] font-bold leading-[19px] hover:cursor-pointer hover:text-bright-red/50'>
+          Get Started
+        </button>
+      </section>
     </div>
   );
 };
