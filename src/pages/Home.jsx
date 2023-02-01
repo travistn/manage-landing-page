@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Navbar from '../components/Navbar';
+import TestimonialCard from '../components/TestimonialCard';
 import charts from '../assets/illustration-intro.svg';
 import data from '../data.json';
 
 const Home = () => {
+  const [testimonial, setTestimonial] = useState(data.testimonials[0]);
+
+  const getTestimonial = (e) => {
+    const findTestimonial = data.testimonials.find(
+      (testimonial) => e.currentTarget.id === testimonial.name
+    );
+
+    setTestimonial(findTestimonial);
+  };
+
   return (
-    <div className='w-[90%] m-auto flex flex-col gap-16 lg:gap-[6rem] items-center lg:w-[80%]'>
+    <div className='w-[90%] m-auto flex flex-col gap-16 lg:gap-[8rem] items-center lg:w-[80%]'>
       <Navbar />
-      <div className='flex flex-col lg:flex-row gap-4 items-center'>
+      <section className='flex flex-col lg:flex-row gap-4 items-center'>
         <div className='lg:order-1 lg:w-[50%]'>
           <img
             src={charts}
@@ -28,8 +39,8 @@ const Home = () => {
             Get Started
           </button>
         </div>
-      </div>
-      <div className='flex flex-col lg:flex-row gap-12 items-center lg:items-start'>
+      </section>
+      <section className='flex flex-col lg:flex-row gap-12 items-center lg:items-start'>
         <div className='flex flex-col gap-4 px-2 lg:w-[50%] lg:pl-6'>
           <h3 className='text-[30px] text-dark-blue font-extrabold leading-[45px] text-center lg:text-[40px] lg:leading-[44px] lg:text-start'>
             What's different about Manage?
@@ -58,7 +69,35 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </div>
+      </section>
+      <section className='flex flex-col gap-12 items-center'>
+        <h1 className='text-dark-blue text-[32px] leading-[45px] font-extrabold mb-8 lg:mb-12 lg:text-[40px] lg:leading-[44px]'>
+          What they've said
+        </h1>
+        <div className='hidden lg:flex flex-row gap-8 w-screen px-8'>
+          {data.testimonials.map((testimonial) => (
+            <TestimonialCard testimonial={testimonial} key={testimonial.name} />
+          ))}
+        </div>
+        <div className='lg:hidden'>
+          <TestimonialCard testimonial={testimonial} />
+        </div>
+        <div className='flex flex-row gap-4 lg:hidden'>
+          {data.testimonials.map((testi, index) => (
+            <div
+              key={index}
+              id={testi.name}
+              onClick={getTestimonial}
+              className={`w-[12px] h-[12px] rounded-full border-[1px] border-bright-red mt-[-1rem] ${
+                testi.name === testimonial.name ? 'bg-bright-red' : ''
+              }`}
+            />
+          ))}
+        </div>
+        <button className='w-[137px] h-[44px] rounded-[22px] bg-bright-red text-[13px] font-bold leading-[19px] text-white hover:cursor-pointer hover:bg-bright-red-hover'>
+          Get Started
+        </button>
+      </section>
     </div>
   );
 };
