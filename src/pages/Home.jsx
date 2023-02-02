@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import TestimonialCard from '../components/TestimonialCard';
 import charts from '../assets/illustration-intro.svg';
 import data from '../data.json';
+import footerLogo from '../assets/footer-logo.svg';
 
 const Home = () => {
   const [testimonial, setTestimonial] = useState(data.testimonials[0]);
@@ -98,7 +99,7 @@ const Home = () => {
           Get Started
         </button>
       </section>
-      <section className='w-screen h-[405px] flex flex-col justify-center items-center gap-8 bg-bright-red lg:h-[220px] lg:flex-row'>
+      <section className='w-screen h-[405px] flex flex-col justify-center items-center gap-8 bg-bright-red bg-cta-mobile bg-no-repeat bg-left lg:bg-cta-desktop lg:h-[220px] lg:flex-row'>
         <h1 className='text-[40px] leading-[50px] tracking-[-1px] text-white font-bold text-center px-8'>
           Simplify how your team works today.
         </h1>
@@ -106,6 +107,51 @@ const Home = () => {
           Get Started
         </button>
       </section>
+      <footer className='w-screen bg-[#1D1E25] mt-[-4rem] flex flex-col justify-center items-center gap-12 py-12 lg:mt-[-8rem] lg:flex-row lg:px-16 lg:gap-[8rem] lg:items-start'>
+        <div className='flex flex-col lg:order-3 lg:gap-[4.5rem]'>
+          <div className='flex flex-row gap-4'>
+            <input
+              placeholder='Updates in your inbox...'
+              className='w-[239px] h-[44px] rounded-[22px] bg-white text-[13px] pl-6'
+            />
+            <button className='w-[80px] h-[44px] bg-bright-red rounded-[22px] text-[13px] leading-[13px] text-white lg:hover:bg-[#F98F75]'>
+              Go
+            </button>
+          </div>
+          <p className='text-[13px] leading-[19px] text-white opacity-50 font-light hidden lg:flex lg:justify-center'>
+            Copyright 2023. All Rights Reserved
+          </p>
+        </div>
+        <div className='flex flex-row gap-[6rem] lg:order-2 lg:gap-[8rem]'>
+          <div className='flex flex-col gap-4 text-white text-[15px] leading-[22px] font-light'>
+            <p className='lg:hover:cursor-pointer lg:hover:text-bright-red'>Home</p>
+            <p className='lg:hover:cursor-pointer lg:hover:text-bright-red'>Pricing</p>
+            <p className='lg:hover:cursor-pointer lg:hover:text-bright-red'>Products</p>
+            <p className='lg:hover:cursor-pointer lg:hover:text-bright-red'>About Us</p>
+          </div>
+          <div className='flex flex-col gap-4 text-white text-[15px] leading-[22px] font-light'>
+            <p className='lg:hover:cursor-pointer lg:hover:text-bright-red'>Careers</p>
+            <p className='lg:hover:cursor-pointer lg:hover:text-bright-red'>Community</p>
+            <p className='lg:hover:cursor-pointer lg:hover:text-bright-red'>Privacy Policy</p>
+          </div>
+        </div>
+        <div className='flex flex-col gap-12 lg:order-1 lg:gap-[5.5rem]'>
+          <div className='flex flex-row gap-8 lg:order-2 lg:gap-4'>
+            {data.companies.map((company) => (
+              <img
+                src={company.logo}
+                alt={company.name}
+                key={company.name}
+                className='w-[32px] h-[32px] lg:w-[20px] lg:h-[20px] hover:cursor-pointer'
+              />
+            ))}
+          </div>
+          <img src={footerLogo} className='h-[26px] lg:order-1 lg:h-[24px]' />
+        </div>
+        <p className='text-[13px] leading-[19px] text-white opacity-50 font-light lg:hidden'>
+          Copyright 2023. All Rights Reserved
+        </p>
+      </footer>
     </div>
   );
 };
