@@ -35,7 +35,7 @@ const Navbar = () => {
         </button>
       </div>
       {toggleMenu && (
-        <div className='lg:hidden w-[90%] h-[290px] m-auto mt-4 bg-gray-50 rounded-md'>
+        <div className='lg:hidden w-[90%] h-[290px] m-auto mt-4 bg-gray-50 rounded-md absolute top-20'>
           <ul className='flex flex-col gap-6 items-center justify-center h-full'>
             {links?.map((link, index) => (
               <li key={index} className='text-[16px] font-bold leading-[23px] text-dark-blue'>
