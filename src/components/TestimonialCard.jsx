@@ -2,7 +2,7 @@ import React from 'react';
 
 const TestimonialCard = ({ testimonial }) => {
   return (
-    <div className='w-full h-[248px] bg-[#FAFAFA] flex flex-col gap-4 items-center justify-center relative lg:w-[540px]'>
+    <div className='w-full h-[248px] bg-[#FAFAFA] flex flex-col gap-4 items-center justify-center relative lg:w-[540px] ease-in duration-300 hover:translate-y-8 hover:cursor-pointer'>
       <img
         src={testimonial.image}
         alt='avatar'
